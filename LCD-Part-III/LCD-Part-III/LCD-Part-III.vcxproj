@@ -115,13 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="InitDes.h" />
     <ClInclude Include="Tweet.h" />
-    <ClInclude Include="Twit.h" />
     <ClInclude Include="UserTwitter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InitDes.cpp" />
     <ClCompile Include="Tweet.cpp" />
-    <ClCompile Include="Twit.cpp" />
     <ClCompile Include="UserTwitter.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -130,11 +130,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\nlohmann.json.3.6.1\build\native\nlohmann.json.targets" Condition="Exists('..\packages\nlohmann.json.3.6.1\build\native\nlohmann.json.targets')" />
+    <Import Project="..\packages\curl.7.30.0.2\build\native\curl.targets" Condition="Exists('..\packages\curl.7.30.0.2\build\native\curl.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\nlohmann.json.3.6.1\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nlohmann.json.3.6.1\build\native\nlohmann.json.targets'))" />
+    <Error Condition="!Exists('..\packages\curl.7.30.0.2\build\native\curl.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\curl.7.30.0.2\build\native\curl.targets'))" />
   </Target>
 </Project>

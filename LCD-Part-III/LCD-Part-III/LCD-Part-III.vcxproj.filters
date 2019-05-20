@@ -21,7 +21,7 @@
     <ClInclude Include="Tweet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Twit.h">
+    <ClInclude Include="InitDes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClCompile Include="Tweet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Twit.cpp">
+    <ClCompile Include="InitDes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
