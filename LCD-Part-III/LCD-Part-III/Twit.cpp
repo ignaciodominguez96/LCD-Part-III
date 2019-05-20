@@ -1,4 +1,11 @@
 #include "Twit.h"
+#include <iostream>
+
+#define TIME_POS 10
+#define TIME_LENGTH 5
+#define MONTH_POS 3
+#define MONTH_LENGTH 3
+#define TWO_DIGIT_YEAR_POS 27
 
 int month_number(string month);
 
@@ -17,19 +24,21 @@ Twit::Twit(string j)
 	name = "@" + name_aux;
 
 	string date_aux = parsed_j["created_at"];		//"Mon May 06 20:01:29 +0000 2019" --> dd/mm/aa y hh:mm
-	time = date_aux.substr(10, 5);
-	int num = month_number(date_aux.substr(4, 3));
+	time = date_aux.substr(TIME_POS, TIME_LENGTH);
+
+	int num = month_number(date_aux.substr(MONTH_POS, MONTH_LENGTH));
 	if (num != 0)
 	{
-		date = date_aux.substr(7, 2) + "/" + to_string(num) + "/" + date_aux.substr(27);
+		date = date_aux.substr(7, 2) + "/" + to_string(num) + "/" + date_aux.substr(TWO_DIGIT_YEAR_POS);
 	}
 	else
 	{
+		cout << "Invalid month" << endl;
 		date = nullptr;
 	}
 	
 	string text_aux = parsed_j["text"];
-	text = text_aux;
+	text = text_aux.substr(0, text_aux.find_last_of("https"));
 }
 
 string
