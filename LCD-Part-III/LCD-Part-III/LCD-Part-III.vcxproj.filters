@@ -18,9 +18,15 @@
     <ClInclude Include="UserTwitter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Tweet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserTwitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tweet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
