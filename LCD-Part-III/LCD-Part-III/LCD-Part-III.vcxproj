@@ -115,11 +115,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\ignaciodominguez96\LCD-Part-I-II\LCD Part I - II\LCD Part I - II\BasicLCD.h" />
+    <ClInclude Include="..\..\..\ignaciodominguez96\LCD-Part-I-II\LCD Part I - II\LCD Part I - II\HAL.h" />
+    <ClInclude Include="..\..\..\ignaciodominguez96\LCD-Part-I-II\LCD Part I - II\LCD Part I - II\HitachiLCD.h" />
+    <ClInclude Include="EventGen.h" />
     <ClInclude Include="InitDes.h" />
     <ClInclude Include="Tweet.h" />
     <ClInclude Include="UserTwitter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EventGen.cpp" />
     <ClCompile Include="InitDes.cpp" />
     <ClCompile Include="Tweet.cpp" />
     <ClCompile Include="UserTwitter.cpp" />

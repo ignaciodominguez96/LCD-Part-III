@@ -24,6 +24,18 @@
     <ClInclude Include="InitDes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\ignaciodominguez96\LCD-Part-I-II\LCD Part I - II\LCD Part I - II\BasicLCD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ignaciodominguez96\LCD-Part-I-II\LCD Part I - II\LCD Part I - II\HAL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ignaciodominguez96\LCD-Part-I-II\LCD Part I - II\LCD Part I - II\HitachiLCD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventGen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserTwitter.cpp">
@@ -33,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InitDes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventGen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

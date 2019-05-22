@@ -8,8 +8,9 @@
 #include <nlohmann/json.hpp>
 #include "Tweet.h"
 
-/*Recibe los tweets y los guarda en una lista. Devuelve un punteroa esa lista*/
-list<Tweet>* Init(void);
-void Destroy(list<Tweet>& lista);
+/*Recibe los tweets y los guarda en una lista. Devuelve un puntero a esa lista*/
+list<Tweet>* InitTweets(void);
+
+void DestroyTweets(list<Tweet>& lista);
 
 #endif

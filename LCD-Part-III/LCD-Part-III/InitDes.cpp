@@ -10,7 +10,7 @@ static size_t myCallback(void *contents, size_t size, size_t nmemb, void *userp)
 using json = nlohmann::json;
 using namespace std;
 
-list<Tweet>* Init(void)
+list<Tweet>* InitTweets(void)
 {
 	json j; 
 
@@ -142,7 +142,7 @@ list<Tweet>* Init(void)
 		while (stillRunning)
 		{
 			curl_multi_perform(multiHandle, &stillRunning);
-
+			//loading();
 																						//ACA IRIA EL "LOADING..."
 		}
 
@@ -183,7 +183,7 @@ list<Tweet>* Init(void)
 	return tweets;
 }
 
-void Destroy(list<Tweet>& lista)
+void DestroyTweets(list<Tweet>& lista)
 {
 	delete &lista;
 }
