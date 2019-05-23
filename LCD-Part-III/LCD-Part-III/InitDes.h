@@ -4,7 +4,9 @@
 #include <iostream>
 #include <exception>
 #include <list>
-#include <curl/curl.h>
+
+#include <curl.h>
+
 #include <nlohmann/json.hpp>
 #include "Tweet.h"
 
