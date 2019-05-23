@@ -96,13 +96,13 @@ list<Tweet>* InitTweets(void)
 		{
 			//Si hubo algun error, se muestra el error que devuelve la libreria
 			std::cerr << e.what() << std::endl;
-			return 0;
+			return nullptr;
 		}
 	}
 	else
 	{
 		cout << "Unable to get token. Unable to start cURL" << endl;
-		return 0;
+		return nullptr;
 	}
 
 	//Una vez obtenido el Token, voy a buscar los Twits
@@ -152,7 +152,7 @@ list<Tweet>* InitTweets(void)
 			cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << endl;
 			//Hacemos un clean up de curl antes de salir.
 			curl_easy_cleanup(curl);
-			return 0;
+			return nullptr;
 		}
 
 		//Siempre realizamos el cleanup al final
@@ -173,11 +173,13 @@ list<Tweet>* InitTweets(void)
 		catch (std::exception& e)
 		{
 			std::cerr << e.what() << std::endl;
+			delete tweets;
 		}
 	}
 	else
 	{
 		cout << "Cannot download tweets. Unable to start cURL" << endl;
+		delete tweets;
 	}
 
 	return tweets;
